@@ -1,2 +1,2 @@
 # METROIDVANIA_PROTOTYPE
- My test work for metroidvania genre
+ My test work for platformer(mobile) genre
