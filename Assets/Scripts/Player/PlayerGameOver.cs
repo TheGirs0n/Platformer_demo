@@ -1,28 +1,16 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
     public class PlayerGameOver : MonoBehaviour
     {
-        [SerializeField] private Transform _player;
-    
-        private Transform _playerPosition;
-        private Vector3 _position;
-    
-        private void Start()
-        {
-            _playerPosition = _player.GetComponent<Transform>();
-        
-            _position.x = _playerPosition.position.x;
-            _position.y = _playerPosition.position.y;
-            _position.z = _playerPosition.position.z;
-        }
-
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.CompareTag("Respawn"))
+            Debug.Log(collision.gameObject.name);
+            if (collision.gameObject.CompareTag("Player"))
             {
-                _playerPosition.position = _position;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }

@@ -10,12 +10,14 @@ namespace Audio
         public void GetCollectable()
         {
             _sound.clip = _clips[0];
+            _sound.volume = 0.75f;
             _sound.Play();
         }
         
         public void Victory()
         {
             _sound.clip = _clips[1];
+            _sound.volume = 0.75f;
             _sound.Play();
         }
     }
